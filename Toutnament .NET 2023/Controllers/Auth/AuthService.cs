@@ -67,11 +67,8 @@ public class AuthService : ControllerBase, IAuthService
 
                 return Ok(new { message = "Authentication successful" });
             }
-
-
             return Unauthorized(new { message = "Invalid email or password" });
         }
-
         return BadRequest(ModelState);
     }
 
